@@ -1,0 +1,57 @@
+{
+  "engine": {
+    "name": "Unreal Engine",
+    "version": "5.3"
+  },
+  "environment": {
+    "reference": "Borobudur area, Magelang, Central Java, Indonesia",
+    "latitude": -7.608,
+    "longitude": 110.204,
+    "scene_type": "stylized outdoor environment inspired by the Borobudur landscape"
+  },
+  "weather_sync": {
+    "provider": "OpenWeather",
+    "interval_minutes": 5,
+    "freshness_threshold_minutes": 10,
+    "fallback": "local computer time + clear-weather state"
+  },
+  "weather_encoding": {
+    "Clear": 0.0,
+    "Cloudy": 0.5,
+    "Rainy": 1.0
+  },
+  "fuzzy_inference": {
+    "type": "Mamdani",
+    "and_operator": "minimum",
+    "implication": "minimum",
+    "aggregation": "maximum",
+    "defuzzification": "centroid",
+    "rule_weight": 1.0
+  },
+  "outputs": {
+    "Key": "cd",
+    "Fill": "cd",
+    "Back": "cd",
+    "domain": [
+      8,
+      13
+    ]
+  },
+  "camera": {
+    "ISO": 400,
+    "shutter_seconds": 0.020833333333333332,
+    "aperture_f": 4.0
+  },
+  "experiment": {
+    "scenarios": 12,
+    "runs_per_scenario": 15,
+    "run_level_triplets": 180,
+    "light_output_observations": 540
+  },
+  "data_source_labels": [
+    "live",
+    "simulated",
+    "replayed"
+  ],
+  "status_note": "Numeric controller parameters are documented from the manuscript specification; implementation-specific values should be verified against the production project before archival release."
+}
